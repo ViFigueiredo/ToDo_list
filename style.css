@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background-color: #e8e6e6;
+    height: 100vh;
+}
+
+.container-modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.371);
+    z-index: 1;
+}
+
+.task-modal {
+    width: 50%;
+    height: 50%;
+    background-color: rgb(221, 221, 221);
+    border-radius: 25px;
+    padding: 2%;
+}
+
+main {
+    z-index: 0;
+    height: 97%;
+    padding: 5%;
+}
+
+html,
+body,
+.container-modal,
+main,
+.title,
+.new-task,
+.tasks-container,
+.tasks,
+.actions,
+footer {
+    display: flex;
+}
+
+body,
+html,
+main,
+.tasks-container {
+    flex-direction: column;
+}
+
+.container-modal,
+.new-task,
+footer {    
+    justify-content: center;
+    align-items: center;
+}
+
+body,
+html,
+.title,
+.tasks {
+    justify-content: space-between;
+}
+
+.tasks-container {
+    margin-top: 2%;
+    padding: 3%;
+    height: 100%;
+}
+
+.tasks {
+    box-shadow: rgba(123, 123, 123, 0.359) 5px 5px 5px;
+    border-radius: 50px;
+    padding: 1%;
+    margin-bottom: 1.5%;
+}
+
+.tasks:hover {
+    background: rgba(88, 88, 88, 0.276);
+}
+
+.tasks>span {
+    margin-left: 2%;
+}
+
+.tasks>span,
+.actions span {
+    cursor: pointer;
+}
+
+.actions {
+    width: 20%;
+    justify-content: space-evenly;
+}
+
+footer {
+    height: 3%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.745);
+    color: whitesmoke;
+}
+
+footer a {
+    margin-left: .5%;
+    text-decoration: none;
+    color: whitesmoke;
+}
