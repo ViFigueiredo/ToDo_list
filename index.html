@@ -2,77 +2,83 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title> ToDo List </title>
+  <title> ToDo List </title>
 
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js" defer></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/root.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  
+  <!-- JS -->
+  <script src="assets/js/script.js" defer></script>
+
+  <!-- ICONS -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
 
 <body>
 
-    <main>
+  <main class="main">
 
-        <div class="title">
-            <h1> Lista de Tarefas Mockup </h1>
+    <div class="title">
+      <h1> Lista de Tarefas Mockup </h1>
 
-            <!-- cria novas tarefas -->
-            <div class="new-task">
-                <h4 id="btn-newtask"> Nova tarefa +</h4>
-            </div>
+      <!-- cria novas tarefas -->
+      <div class="new-task">
+        <h4 id="btn-newtask"> Nova tarefa +</h4>
+      </div>
+    </div>
+
+    <!-- popup de criação de tarefas -->
+    <div class="container-modal container-modal-display">
+      <div class="task-modal">
+        <div class="task-title">
+          <label> Título da tarefa: </label>
+          <input type="text" id="task-title" required>
         </div>
 
-        <!-- popup de criação de tarefas -->
-        <div class="container-modal container-modal-display">
-            <div class="task-modal">
-                <div class="task-title">
-                    <label> Título da tarefa: </label>
-                    <input type="text" id="task-title" required>
-                </div>
-
-                <div class="task-description">
-                    <label> Descrição: </label>
-                    <input type="text" id="task-description">
-                </div>
-
-                <div class="task-conclusion">
-                    <label> Data/hora de conclusão: </label>
-                    <input type="datetime-local" id="task-datetime">
-                </div>
-
-                <div class="task-files">
-                    <label> Importar arquivos: </label>
-                    <input type="file" multiple id="task-uploads">
-                </div>
-
-                <div class="task-notes">
-                    <label> Observações: </label>
-                    <textarea id="task-notes"></textarea>
-                </div>
-
-                <div class="task-actions">
-                    <button type="submit" id="btn-taskCancel"> Cancelar</button>
-                    <div class="button-ghost"></div>
-                    <button type="submit" id="btn-taskSave"> Cadastrar</button>
-                </div>
-            </div>
+        <div class="task-description">
+          <label> Descrição: </label>
+          <input type="text" id="task-description">
         </div>
 
-        <!-- tarefas criadas -->
-        <div class="tasks-container">
-            <div class="no-data">
-                <h3> Não há tarefas cadastradas no sistema! </h3>
-            </div>
-
-            <div class="tasks-list"></div>
+        <div class="task-conclusion">
+          <label> Data/hora de conclusão: </label>
+          <input type="datetime-local" id="task-datetime">
         </div>
 
-    </main>
+        <div class="task-files">
+          <label> Importar arquivos: </label>
+          <input type="file" multiple id="task-uploads">
+        </div>
 
-    <footer> 2023 &copy; <a href="https://github.com/ViFigueiredo" target="_blank">Vinicius Figueiredo</a> </footer>
+        <div class="task-notes">
+          <label> Observações: </label>
+          <textarea id="task-notes"></textarea>
+        </div>
+
+        <div class="task-actions">
+          <button type="submit" id="btn-taskCancel"> Cancelar</button>
+          <div class="button-ghost"></div>
+          <button type="submit" id="btn-taskSave"> Cadastrar</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- tarefas criadas -->
+    <div class="tasks-container">
+      <div class="no-data">
+        <h3> Não há tarefas cadastradas no sistema! </h3>
+      </div>
+
+      <div class="tasks-list"></div>
+    </div>
+
+  </main>
+
+  <footer class="footer"> 2023 &copy; <a href="https://github.com/ViFigueiredo" target="_blank">Vinicius Figueiredo</a> </footer>
 
 </body>
 
