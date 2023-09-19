@@ -1,3 +1,5 @@
+@import url('./root.css');
+
 .new-task:hover {
     text-decoration: underline;
 }
