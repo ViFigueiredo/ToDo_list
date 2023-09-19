@@ -125,3 +125,17 @@
     text-decoration: none;
     color: whitesmoke;
 }
+
+.actions-main {
+    width: 20%;
+    align-items: last baseline;
+}
+
+.actions-main span {
+    font-size: 2rem;
+}
+
+.actions-main span:nth-of-type(2) {
+    font-size: 2rem;
+    margin: 0 10%;
+}

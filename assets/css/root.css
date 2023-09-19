@@ -22,6 +22,7 @@ body,
 .no-data,
 .tasks,
 .actions,
+.actions-main,
 .main,
 .footer {
     display: flex;
@@ -35,6 +36,7 @@ html,
     flex-direction: column;
 }
 
+.actions-main,
 .container-modal,
 .new-task,
 .no-data,
@@ -56,9 +58,9 @@ textarea {
     box-shadow: rgba(123, 123, 123, 0.359) 5px 5px 5px;
 }
 
+.actions-main span,
 .tasks>span,
 .actions span,
-.new-task,
 .task-actions button:nth-of-type(1),
 .task-actions button:nth-of-type(2) {
     cursor: pointer;
