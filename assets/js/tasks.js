@@ -24,7 +24,7 @@ export function createTask(containerModal, taskTitle, taskDescription, taskDatet
 
     alert('Tarefa criada com sucesso!');
     containerModal.classList.add('container-modal-display');
-    location.reload();
+    window.location.href = "/index.html";
 }
 
 // Função para carregar as tarefas
