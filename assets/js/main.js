@@ -15,14 +15,8 @@ const taskNotes = document.querySelector('#task-notes');
 // Event Listeners
 btnTaskSave.addEventListener('click', () => createTask(containerModal, taskTitle, taskDescription, taskDatetime, taskFiles, taskNotes));
 btnTaskCancel.addEventListener('click', () => containerModal.classList.add('container-modal-display'));
-btnNewTask.addEventListener('click', () => {
-    taskTitle.value = '';
-    taskDescription.value = '';
-    taskDatetime.value = '';
-    taskFiles.value = '';
-    taskNotes.value = '';
-    containerModal.classList.remove('container-modal-display');
-});
+window.addEventListener('keydown', (event) => (event.key === 'Escape' || event.code === 27) ? containerModal.classList.add('container-modal-display') : '');
+btnNewTask.addEventListener('click', () => (taskTitle.value = taskDescription.value = taskDatetime.value = taskFiles.value = taskNotes.value = '', containerModal.classList.remove('container-modal-display')));
 
 // Inicialização
 loadTasks();
