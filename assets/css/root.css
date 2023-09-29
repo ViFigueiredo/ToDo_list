@@ -5,6 +5,17 @@
     box-sizing: border-box;
 }
 
+.myObject {
+    width: 100%;
+    height: 100vh;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden !important;
+}
+
+
 html,
 body {
     background-color: #e8e6e6;
