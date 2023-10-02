@@ -3,6 +3,8 @@ import { createElementWithClasses } from './utils.js';
 // Função para criar uma nova tarefa
 export function createTask(containerModal, taskTitle, taskDescription, taskDatetime, taskFiles, taskNotes) {
 
+    const tasksArrayStorage = JSON.parse(localStorage.getItem('todo-tasks')) || [];
+
     const taskTitleValue = taskTitle.value.trim();
     if (!taskTitleValue) {
         return alert('Título da tarefa é obrigatório!');
@@ -16,15 +18,23 @@ export function createTask(containerModal, taskTitle, taskDescription, taskDatet
         notes: taskNotes.value,
     };
 
-    console.log(taskCreated);
+    // verifica se titulo e data já existem
+    let isValidTask = true;
 
-    const tasksArrayStorage = JSON.parse(localStorage.getItem('todo-tasks')) || [];
-    tasksArrayStorage.push(taskCreated);
-    localStorage.setItem('todo-tasks', JSON.stringify(tasksArrayStorage));
+    tasksArrayStorage.forEach(arrTasks => {
+        (arrTasks.title.trim().toString() == taskCreated.title.trim().toString()) ? isValidTask = false : isValidTask = true;
+        (arrTasks.datetime.trim().toString() == taskCreated.datetime.trim().toString()) ? isValidTask = false : isValidTask = true;
+    });
 
-    alert('Tarefa criada com sucesso!');
-    containerModal.classList.add('container-modal-display');
-    window.location.href = "/index.html";
+    if (isValidTask) {
+        tasksArrayStorage.push(taskCreated);
+        localStorage.setItem('todo-tasks', JSON.stringify(tasksArrayStorage));
+        alert('Tarefa criada com sucesso!');
+        containerModal.classList.add('container-modal-display');
+        window.location.href = "/index.html";
+    } else {
+        alert('Tarefa já criada anteriormente!');
+    }
 }
 
 // Função para carregar as tarefas

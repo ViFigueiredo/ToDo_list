@@ -111,6 +111,11 @@
     width: 0;
 }
 
+.tasks-container {
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
 .footer {
     height: 3%;
     width: 100%;
